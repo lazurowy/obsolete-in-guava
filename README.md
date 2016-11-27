@@ -102,7 +102,8 @@ public static void checkState(boolean expression, String errorMessageTemplate,  
 // TODO
 
 5. Ordering
------------------// TODO
+-----------------
+// TODO
 
 6. Predicate/Function interfaces
 -----------------
