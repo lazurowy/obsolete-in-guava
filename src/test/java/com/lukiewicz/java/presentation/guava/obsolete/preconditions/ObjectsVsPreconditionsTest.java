@@ -1,5 +1,6 @@
 package com.lukiewicz.java.presentation.guava.obsolete.preconditions;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
 import java.util.Collection;
 
@@ -11,8 +12,8 @@ import org.junit.runners.Parameterized;
 import org.junit.runners.Parameterized.Parameter;
 import org.junit.runners.Parameterized.Parameters;
 
+import com.lukiewicz.java.presentation.guava.Duck;
 import com.lukiewicz.java.presentation.guava.obsolete.preconditions.CodeReviewer;
-import com.lukiewicz.java.presentation.guava.obsolete.preconditions.Duck;
 import com.lukiewicz.java.presentation.guava.obsolete.preconditions.GuavaCodeReviewer;
 import com.lukiewicz.java.presentation.guava.obsolete.preconditions.VanillaCodeReviewer;
 
@@ -31,7 +32,7 @@ public class ObjectsVsPreconditionsTest {
 	public final ExpectedException exception = ExpectedException.none();
 
 	@Test
-	public void testCodeReviewerCreationException() throws Exception {
+	public void testCodeReviewerCreationException() throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
 		exception.expect(NullPointerException.class);
 		exception.expectMessage("Duck is necesarry to initialize code reviewer");
 
@@ -40,7 +41,7 @@ public class ObjectsVsPreconditionsTest {
 	}
 
 	@Test
-	public void testCodeReviewerWhenCodeIsNull() throws Exception {
+	public void testCodeReviewerWhenCodeIsNull() throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException  {
 		exception.expect(NullPointerException.class);
 
 		CodeReviewer codeReviewer = codeReviewerClass.getConstructor().newInstance();
@@ -49,7 +50,7 @@ public class ObjectsVsPreconditionsTest {
 	}
 
 	@Test
-	public void testCodeReviewerWhenAuthorIsNull() throws Exception {
+	public void testCodeReviewerWhenAuthorIsNull() throws InstantiationException, IllegalAccessException, IllegalArgumentException, InvocationTargetException, NoSuchMethodException, SecurityException {
 		exception.expect(NullPointerException.class);
 		exception.expectMessage("Author of code is missing. Code: System.out.println");
 

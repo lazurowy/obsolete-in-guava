@@ -1,6 +1,7 @@
 package com.lukiewicz.java.presentation.guava.obsolete.preconditions;
 
 import com.google.common.base.Preconditions;
+import com.lukiewicz.java.presentation.guava.Duck;
 
 public class GuavaCodeReviewer implements CodeReviewer {
 
